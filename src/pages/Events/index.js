@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import { Box, Text, Button, Input, Tag, Menu, MenuButton, MenuList, MenuItem, Center  } from '@chakra-ui/react'
@@ -55,15 +55,11 @@ const Events = () => {
           SetEventList(updated)
       }
 
-      const hidePrivate = () => {
-          SetEventList(eventList.filter((event) => event.permission === "public"))
-          SetIsHacker(false)
-      }
+    //   const hidePrivate = () => {
+    //       SetEventList(eventList.filter((event) => event.permission === "public"))
+    //       SetIsHacker(false)
+    //   }
 
-      const resetEvents = () => {
-            SetIsFiltered(false);
-            SetEventList(allEvents);
-      }
 
       const filterEvents = (type) => {
           if (!isFiltered) {

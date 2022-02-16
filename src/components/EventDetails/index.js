@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
-import { Box, Heading, Tag, Container, Text, Button, Stack, UnorderedList, ListItem , Tabs, TabList, TabPanels, Tab, TabPanel  } from '@chakra-ui/react'
+import { Box, Heading, Tag, Container, Text, Button, UnorderedList, ListItem , Tabs, TabList, TabPanels, Tab, TabPanel  } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 
