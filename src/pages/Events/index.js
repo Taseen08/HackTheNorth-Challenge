@@ -43,7 +43,8 @@ const Events = () => {
 
     // Helper function for search. Alters events list dynamically with search
     const updateList = (e) => {
-        const updated = allEvents.filter((event) => { return event.name.toLowerCase().includes(e.toLowerCase()) })
+        const updated = allEvents.filter((event) => { return (event.name.toLowerCase().includes(e.toLowerCase()) &&
+                                                              event.event_type === currentType)})
         SetEventList(updated)
     }
 
