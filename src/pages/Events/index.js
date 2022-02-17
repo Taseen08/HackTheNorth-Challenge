@@ -96,10 +96,10 @@ const Events = () => {
                         Filter
                     </MenuButton>
                     <MenuList>
+                        <MenuItem onClick={() => SetEventList(allEvents)}>All events</MenuItem>
                         <MenuItem onClick={() => filterEvents("tech_talk")}>Tech Talk</MenuItem>
                         <MenuItem onClick={() => filterEvents("workshop")}>Workshop</MenuItem>
                         <MenuItem onClick={() => filterEvents("activity")}>Activity</MenuItem>
-                        <MenuItem onClick={() => SetEventList(allEvents)}>All events</MenuItem>
                     </MenuList>
                 </Menu>
 
