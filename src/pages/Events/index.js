@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
-import { Box, Text, Button, Input, Tag, Menu, MenuButton, MenuList, MenuItem, Center } from '@chakra-ui/react'
+import { Box, Text, Button, Input, Badge, Tag, Menu, MenuButton, MenuList, MenuItem, Center } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
 import styles from "./index.module.css";
@@ -120,10 +120,10 @@ const Events = () => {
                             borderColor={"rgb(252, 250, 243)"}>
                                 
                             <Text display='inline-block' fontSize='lg' color={"white"}>{event?.name}</Text>
-                            <Tag size={'sm'} key={'1'} marginLeft={'5px'} color={'rgb(29, 76, 130)'} fontSize="10px" variant='solid' backgroundColor={'rgb(250, 227, 19)'}>{event?.event_type.toUpperCase()}</Tag>
-                            <Tag size={'sm'} key={'2'} marginLeft={'5px'} variant='solid' backgroundColor={'#4abd9a'}>
+                            <Badge size={'sm'} key={'1'} marginLeft={'5px'} color={'rgb(29, 76, 130)'} borderRadius={'md'} fontSize="10px" variant='solid' backgroundColor={'rgb(250, 227, 19)'}>{event?.event_type.toUpperCase()}</Badge>
+                            <Badge size={'sm'} key={'2'} marginLeft={'5px'} borderRadius={'md'} variant='solid' backgroundColor={'#4abd9a'}>
                                 {new Date(event?.start_time).toUTCString()}
-                            </Tag>
+                            </Badge>
                         </Box>
                     </Link>
                 )

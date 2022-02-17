@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from "../src/pages/Home";
 import Events from "../src/pages/Events";
-import EventDetails from './components/EventDetails';
+import EventDetails from '../src/pages/EventDetails';
 
 
 const App = () => {
