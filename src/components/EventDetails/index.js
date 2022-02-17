@@ -30,8 +30,8 @@ const EventDetails = () => {
                     <Text color={'white'} fontWeight='600' margin={'5% 0'}>
                         {description}
                     </Text>
-                    <Button variant='solid' bg={'#FF0000'} color={'white'} rightIcon={<ExternalLinkIcon />} _hover><a href={public_url}>YouTube</a></Button>
-                    {loggedIn && <Button variant='solid' ml={'20px'} bg={'#0a54cc'} color={'white'} rightIcon={<ExternalLinkIcon />}><a href={private_url}>Hopin</a></Button>}
+                    <Button variant='solid' bg={'#FF0000'} color={'white'} rightIcon={<ExternalLinkIcon />} _hover><a target='_blank' href={public_url}>YouTube</a></Button>
+                    {loggedIn && <Button variant='solid' ml={'20px'} bg={'#0a54cc'} color={'white'} rightIcon={<ExternalLinkIcon />}><a target='_blank' href={private_url}>Hopin</a></Button>}
                 </Container>
             </Center>
             <Container>
