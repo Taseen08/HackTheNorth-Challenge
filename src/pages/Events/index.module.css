@@ -1,6 +1,7 @@
 .mainStyle {
     background-color: #E7F6FC;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .containerStyle {
