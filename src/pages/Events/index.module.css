@@ -1,0 +1,10 @@
+.mainStyle {
+    background-color: #E7F6FC;
+    height: 100vh;
+}
+
+.containerStyle {
+    background-color: #E7F6FC;
+    height: auto;
+    padding-bottom: 30px;
+}

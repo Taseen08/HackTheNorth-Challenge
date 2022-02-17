@@ -7,7 +7,7 @@ import {
     AlertIcon,
     AlertTitle,
     CloseButton
-  } from '@chakra-ui/react'
+} from '@chakra-ui/react'
 
 
 
@@ -15,8 +15,9 @@ const Home = () => {
     const [email, SetEmail] = useState("email");
     const [password, SetPassword] = useState("password");
     const [loggedIn, SetLoggedIn] = useState(false);
-    const [popAlert, SetPopAlert] = useState(false);
+    const [popAlert, SetPopAlert] = useState(false); // used to render error alert when wrong credentials used for sign in
 
+    // checks if the sign in credentials are accurate
     const checkInfo = () => {
         if (email === "challenge@testmail.com" && password === "12345") {
             SetLoggedIn(true);
@@ -28,10 +29,10 @@ const Home = () => {
     return (
         <div className={styles.divStyle}>
             <div className={styles.loginStyle}>
-
                 <Container fontSize={'25px'} ml={'2'}>
-                <p><strong><span style={{color : "rgb(250, 227, 19)", fontSize : "55px"}}>Hello There!</span><br/>Let me help you explore all the amazing events and workshops we have to offer!</strong></p>
-</Container>
+                    <p><strong><span style={{ color: "rgb(250, 227, 19)", fontSize: "55px" }}>Hello There!</span><br />
+                    Let me help you explore all the amazing events and workshops we have to offer!</strong></p>
+                </Container>
                 <div className={styles.infoStyle}>
                     <p>Email</p>
                     <input
@@ -47,22 +48,21 @@ const Home = () => {
                         required
                         onChange={event => SetPassword(event.target.value)}
                     />
-                    {popAlert && <Alert status='error'>
-  <AlertIcon />
-  <AlertTitle mr={2}>Email/password incorrect!</AlertTitle>
-  <CloseButton onClick={() => SetPopAlert(false)} position='absolute' right='8px' top='8px' />
-</Alert>}
+                    {popAlert && <Alert status='error'> 
+                        <AlertIcon />
+                        <AlertTitle mr={2}>Email/password incorrect!</AlertTitle>
+                        <CloseButton onClick={() => SetPopAlert(false)} position='absolute' right='8px' top='8px' />
+                    </Alert>}
                     <div className={styles.buttonsStyle}>
-                      <div onClick={() => checkInfo()}>
-                        <Link
-                            to={(email === "challenge@testmail.com" && password === "12345") ? "/events" : "/"}
-                            state={{ email, password, loggedIn : true }}
-                            className={styles.buttonStyle}
-                        >
-                            <p>Sign in</p>
-                        </Link>
+                        <div onClick={() => checkInfo()}>
+                            <Link
+                                to={(email === "challenge@testmail.com" && password === "12345") ? "/events" : "/"}
+                                state={{ email, password, loggedIn: true }}
+                                className={styles.buttonStyle}
+                            >
+                                <p>Sign in</p>
+                            </Link>
                         </div>
-
 
                         <Link
                             to={"/events"}

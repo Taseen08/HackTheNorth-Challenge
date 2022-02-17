@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E7F6FC;
+  background-color: #e7f6fc;
   height: 100vh;
   width: 100vw;
   font-family: "Montserrat", sans-serif;
@@ -20,19 +20,12 @@
   border: none;
 }
 
-.headerStyle {
-    padding: 10%;
-    font-size: 30px;
-    text-align: left;
-  }
-
 .infoStyle {
   display: flex;
   flex-direction: column;
   padding: 0% 15%;
   width: 80%;
 }
-
 
 .infoStyle > p {
   font-size: 18px;
@@ -59,7 +52,6 @@
   margin-top: 25px;
 }
 
-
 .buttonStyle {
   display: flex;
   justify-content: center;
@@ -80,50 +72,37 @@
 }
 
 .buttonStyle:hover {
-    background-color:rgba(14, 52, 96);
-    color: rgb(232, 236, 238);
+  background-color: rgba(14, 52, 96);
+  color: rgb(232, 236, 238);
 }
-
 
 /* Responsive */
 
-@media screen and (min-width: 500px ) {
-    .infoStyle {
-        align-items: flex-start;
-    }
-    .infoStyle > input {
-        width: 70%;
-    }
-    .headerStyle {
-        font-size: 40px;
-    }
+@media screen and (min-width: 500px) {
+  .infoStyle {
+    align-items: flex-start;
+  }
+  .infoStyle > input {
+    width: 70%;
+  }
+  .buttonsStyle {
+    flex-direction: row;
+  }
 
-    .buttonsStyle {
-        flex-direction: row;
-    }
-
-    .buttonStyle {
-        margin: 5px 25px 5px 0;
-        width: 120px;
-    }
+  .buttonStyle {
+    margin: 5px 25px 5px 0;
+    width: 120px;
+  }
 }
 
-@media screen and (min-width: 900px ) {
-    .loginStyle {
-        flex-direction: row;
-        justify-content: center;
-        width: 70%;
-    }
+@media screen and (min-width: 900px) {
+  .loginStyle {
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+  }
 
-    .headerStyle {
-        text-align: center;
-        height: 70vh;
-    }
-
-    .infoStyle > input {
-        width: 120%;
-    }
-
+  .infoStyle > input {
+    width: 120%;
+  }
 }
-
-
